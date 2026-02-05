@@ -5,8 +5,6 @@ A full-stack slot booking application built with React, Node.js, and MongoDB.
 ## Features
 - User Authentication (Signup/Login)
 - Calendar-based Slot Booking
-- Persistent Slot Management
-- Premium, Responsive UI
 
 ## Running the project
 
