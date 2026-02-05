@@ -1,0 +1,43 @@
+@use '../../styles/variables' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px;
+  background-color: $gray-light;
+  align-self: stretch;
+}
+
+.month {
+  width: 44px;
+  height: 44px;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 16.5px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0;
+
+  color: #4b3b53;
+
+  transition: background-color 0.2s ease, font-weight 0.2s ease;
+
+  transform: rotate(90deg);
+
+  &:hover {
+    filter: brightness(0.97);
+  }
+}
+
+.active {
+  background-color: #ffffff;
+  font-weight: 600;
+}

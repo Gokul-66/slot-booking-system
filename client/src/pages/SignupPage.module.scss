@@ -1,0 +1,125 @@
+@use '../styles/variables' as *;
+
+.signupCard {
+    --auth-card-max-width: 800px;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contactInputWrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.countryCodeSelect {
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: $radius;
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+    color: $text-dark;
+    outline: none;
+    cursor: pointer;
+    min-width: 90px;
+    text-align: center;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1em;
+    padding-right: 2rem;
+
+    box-sizing: border-box;
+    height: 52px;
+    display: flex;
+    align-items: center;
+
+    &:focus {
+        border-color: $primary;
+        background-color: #ffffff;
+    }
+}
+
+.phoneInput {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: $radius;
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s ease;
+    color: $text-dark;
+    box-sizing: border-box;
+
+    &:focus {
+        border-color: $primary;
+        background-color: #ffffff;
+    }
+}
+
+.linkContainer {
+    text-align: center;
+    margin: 1.5rem 0 2rem;
+}
+
+.loginLink {
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.95rem;
+
+    strong {
+        color: #333;
+        font-weight: 700;
+    }
+
+    &:hover {
+        color: $primary;
+
+        strong {
+            color: $primary;
+        }
+    }
+}
+
+.signupButton {
+    width: 100%;
+    padding: 1rem;
+    background-color: $primary;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.contactContainer label {
+    margin-bottom: 0.5rem;
+    margin-left: 0.25rem;
+    color: $text-dark;
+    font-size: 0.875rem;
+    font-weight: 600;
+}

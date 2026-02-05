@@ -1,0 +1,43 @@
+@use '../../styles/variables' as *;
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.monthText {
+    color: #aeb5be;
+    color: #B8A5CE;
+    color: lighten($primary, 20%);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.arrowButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f2f2f2;
+    color: $text-dark;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: darken(#f2f2f2, 5%);
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
+        stroke: currentColor;
+        stroke-width: 2.5;
+    }
+}

@@ -1,0 +1,69 @@
+@use '../../styles/variables' as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: $primary-light;
+    border-radius: $radius;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dayLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 0.125rem;
+    line-height: 1.2;
+}
+
+.topic {
+    font-size: 0.65rem;
+    color: $primary;
+    line-height: 1.2;
+}
+
+.date {
+    align-self: flex-end;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: $text-dark;
+}
+
+.deleteButton {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.35rem 0;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: $text-dark;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+
+    &:hover {
+        background-color: #f5f5f5;
+    }
+}

@@ -1,0 +1,87 @@
+@use '../../styles/variables' as *;
+
+.calendarDay {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: $gray-light;
+    border-radius: $radius;
+    overflow: hidden;
+    transition: all 0.2s ease;
+
+
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &.populated {
+        background-color: $primary-light;
+
+        .label,
+        .topic {
+            color: $primary;
+        }
+    }
+
+    &.active {
+        background-color: $primary;
+
+        .label,
+        .topic,
+        .dayNumber {
+            color: #ffffff;
+        }
+
+
+    }
+
+    &.disabled {
+        background-color: #f5f5f5;
+        color: #cccccc;
+
+        .dayNumber {
+            color: #999;
+        }
+    }
+
+    &:not(.disabled):hover {
+        cursor: default;
+    }
+
+    &.active:hover {
+        opacity: 0.9;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 0.125rem;
+}
+
+.topic {
+    font-size: 0.65rem;
+    color: $primary;
+    line-height: 1.2;
+}
+
+.dayNumber {
+    align-self: flex-end;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $text-dark;
+}

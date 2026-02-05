@@ -1,0 +1,39 @@
+@use '../../styles/variables' as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.label {
+    color: $text-dark;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-left: 0.25rem;
+}
+
+.input {
+    background-color: #ffffff;
+
+    border: 1px solid transparent;
+    border-radius: $radius;
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    color: $text-dark;
+
+    &::placeholder {
+        color: #999;
+    }
+
+    &:focus {
+        border-color: $primary;
+        background-color: #ffffff;
+        box-shadow: 0 0 0 4px $primary-light;
+    }
+}

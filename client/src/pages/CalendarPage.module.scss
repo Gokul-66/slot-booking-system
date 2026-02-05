@@ -1,0 +1,16 @@
+.pageLayout {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  gap: 10px;
+  margin-top: 24px;
+  align-items: stretch;
+  margin-left: 5%;
+}
+
+.calendarSection {
+  max-width: 820px;
+}
+
+.rightSection {
+  width: 100%;
+}
